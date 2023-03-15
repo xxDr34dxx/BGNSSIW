@@ -7,7 +7,7 @@ from discord.ext import commands
 __author__ = "dr34d a.k.a. Tori"
 __copyright__ = "Copyright 2023, dr34d"
 __license__ = "MIT"
-__version__ = "1.1.0"
+__version__ = "1.2.0"
 __date__ = "2023-03-14"
 __maintainer__ = "dr34d"
 __status__ = "Production"
@@ -29,6 +29,9 @@ client = commands.Bot(MAGICCHAR,intents=discord.Intents.all())
 async def on_message_edit(before, after):
     if before.author == client.user:
         # Ignore messages edited by the bot
+        return
+    if before.content == after.content:
+        #Ignore messages with identical content. This is useful when messages contain gifs or URLs.
         return
     else:
         channel = client.get_channel(LOG_CHANNEL)
