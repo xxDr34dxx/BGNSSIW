@@ -18,7 +18,7 @@ __license__ = "MIT"
 __version__ = "2.0.0"
 __date__ = "2023-03-18"
 __maintainer__ = "dr34d"
-__status__ = "Prototype"
+__status__ = "Production"
 
 ########################## Editable Defaults #########################
 # NOTE: Changing these could affect execution in unpredictable ways! #
